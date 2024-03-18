@@ -7,6 +7,11 @@
 
 import UIKit
 
+private enum Constants {
+    static let launchScreenLiveTime = 5.5 
+    static let transitionAnimationDuration = 1.0
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,11 +21,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        let rootVC = ViewController()
+        let rootVC = LaunchScreenViewController()
+        let navigationController = UINavigationController(rootViewController: rootVC)
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = rootVC
+        window?.rootViewController = navigationController
+        launchAppCoordinator()
         window?.makeKeyAndVisible()
     }
 
+    // MARK: - Private Methods
+
+    private func launchAppCoordinator() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenLiveTime) {
+            print("выполняется")
+            UIView.animate(withDuration: Constants.transitionAnimationDuration) {
+                let newRootVC = LoginViewController()
+                
+                self.window?.rootViewController = newRootVC
+
+
+                UIView.transition(with: self.window!,
+                                  duration: Constants.transitionAnimationDuration,
+                                  options: .transitionCrossDissolve,
+                                  animations: nil,
+                                  completion: nil)
+            }
+        }
+    }
 }
 
