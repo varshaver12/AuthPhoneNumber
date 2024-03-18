@@ -35,7 +35,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenLiveTime) {
             print("выполняется")
             UIView.animate(withDuration: Constants.transitionAnimationDuration) {
-                let newRootVC = LoginViewController()
+                let loginVM = LoginViewModel()
+                let newRootVC = LoginViewController(viewModel: loginVM)
                 
                 self.window?.rootViewController = newRootVC
 
