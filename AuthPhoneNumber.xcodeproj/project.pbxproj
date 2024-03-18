@@ -13,6 +13,10 @@
 		3BFAAD1F2BA8A8B400FE4800 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFAAD1E2BA8A8B400FE4800 /* LaunchScreenViewController.swift */; };
 		3BFAAD242BA8A8B600FE4800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFAAD232BA8A8B600FE4800 /* Assets.xcassets */; };
 		3BFAAD372BA8BD6D00FE4800 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFAAD362BA8BD6D00FE4800 /* LoginViewController.swift */; };
+		3BFAAD392BA8C4C400FE4800 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BFAAD382BA8C4C300FE4800 /* GoogleService-Info.plist */; };
+		3BFAAD3C2BA8D10000FE4800 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFAAD3B2BA8D10000FE4800 /* LoginViewModel.swift */; };
+		3BFAAD3F2BA8D1CF00FE4800 /* AuthScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFAAD3E2BA8D1CF00FE4800 /* AuthScreenView.swift */; };
+		3BFAAD412BA8D1DD00FE4800 /* AuthScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFAAD402BA8D1DD00FE4800 /* AuthScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		3BFAAD232BA8A8B600FE4800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BFAAD282BA8A8B600FE4800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BFAAD362BA8BD6D00FE4800 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BFAAD382BA8C4C300FE4800 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3BFAAD3B2BA8D10000FE4800 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3BFAAD3E2BA8D1CF00FE4800 /* AuthScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenView.swift; sourceTree = "<group>"; };
+		3BFAAD402BA8D1DD00FE4800 /* AuthScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewModel.swift; sourceTree = "<group>"; };
 		5EB9CBB0D84464A744441435 /* Pods_AuthPhoneNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthPhoneNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,7 +80,8 @@
 			children = (
 				3BFAAD1A2BA8A8B400FE4800 /* AppDelegate.swift */,
 				3BFAAD1C2BA8A8B400FE4800 /* SceneDelegate.swift */,
-				3BFAAD362BA8BD6D00FE4800 /* LoginViewController.swift */,
+				3BFAAD3D2BA8D1A300FE4800 /* AuthScreenModule */,
+				3BFAAD3A2BA8D0B400FE4800 /* ButtonAuth */,
 				3BFAAD1E2BA8A8B400FE4800 /* LaunchScreenViewController.swift */,
 				3BFAAD2F2BA8AAE600FE4800 /* Sources */,
 			);
@@ -82,6 +91,7 @@
 		3BFAAD2F2BA8AAE600FE4800 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3BFAAD382BA8C4C300FE4800 /* GoogleService-Info.plist */,
 				3BFAAD302BA8AB0B00FE4800 /* Resources */,
 			);
 			path = Sources;
@@ -94,6 +104,24 @@
 				3BFAAD282BA8A8B600FE4800 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3BFAAD3A2BA8D0B400FE4800 /* ButtonAuth */ = {
+			isa = PBXGroup;
+			children = (
+				3BFAAD362BA8BD6D00FE4800 /* LoginViewController.swift */,
+				3BFAAD3B2BA8D10000FE4800 /* LoginViewModel.swift */,
+			);
+			path = ButtonAuth;
+			sourceTree = "<group>";
+		};
+		3BFAAD3D2BA8D1A300FE4800 /* AuthScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				3BFAAD3E2BA8D1CF00FE4800 /* AuthScreenView.swift */,
+				3BFAAD402BA8D1DD00FE4800 /* AuthScreenViewModel.swift */,
+			);
+			path = AuthScreenModule;
 			sourceTree = "<group>";
 		};
 		B3BC6E9A7032E8EAF6694D03 /* Frameworks */ = {
@@ -165,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BFAAD242BA8A8B600FE4800 /* Assets.xcassets in Resources */,
+				3BFAAD392BA8C4C400FE4800 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +249,9 @@
 				3BFAAD1F2BA8A8B400FE4800 /* LaunchScreenViewController.swift in Sources */,
 				3BFAAD1B2BA8A8B400FE4800 /* AppDelegate.swift in Sources */,
 				3BFAAD372BA8BD6D00FE4800 /* LoginViewController.swift in Sources */,
+				3BFAAD3C2BA8D10000FE4800 /* LoginViewModel.swift in Sources */,
+				3BFAAD412BA8D1DD00FE4800 /* AuthScreenViewModel.swift in Sources */,
+				3BFAAD3F2BA8D1CF00FE4800 /* AuthScreenView.swift in Sources */,
 				3BFAAD1D2BA8A8B400FE4800 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -336,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -362,7 +394,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +404,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -394,7 +427,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +437,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

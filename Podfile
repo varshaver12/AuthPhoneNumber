@@ -7,5 +7,7 @@ target 'AuthPhoneNumber' do
 
   # Pods for AuthPhoneNumber
 pod 'SnapKit', '~> 5.6.0'
+pod "FlagPhoneNumber"
+pod 'FirebaseAuth'
 
 end
